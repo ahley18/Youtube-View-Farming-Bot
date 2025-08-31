@@ -9,7 +9,7 @@ y = [300, 300, 300, 700, 700, 700]
 #time interval
 time_seconds = 60
 
-yt_link = "https://www.youtube.com/@cla_sterling8633/shorts"
+fb_link = "https://www.facebook.com/profile.php?id=61579909649575&sk=reels_tab"
 
 # Function to move cursor and scroll
 def move_and_scroll_down():
@@ -20,13 +20,16 @@ def move_and_scroll_down():
     for i in range(len(x)):        
         # Move the cursor to the specified position (x[i], y[i])
         pyautogui.moveTo(x[i], y[i])
+        time.sleep(0.1)
+        pyautogui.click()
+        time.sleep(0.1)
         print(f"Cursor moved to position: ({x[i]}, {y[i]})")
         
-        # Scroll down
-        pyautogui.scroll(-300)  # Negative value to scroll down
-        print("Scrolled down")
+        # press right arrow button
+        pyautogui.press("right")
+        print("Pressed right arrow")
         
-        # Small delay after scrolling
+        # Small delay after pressing
         time.sleep(0.5)
 
 def move_and_scroll_up():
@@ -38,10 +41,13 @@ def move_and_scroll_up():
         # Move the cursor to the specified position (x[i], y[i])
         pyautogui.moveTo(x[i], y[i])
         print(f"Cursor moved to position: ({x[i]}, {y[i]})")
+        time.sleep(0.1)
+        pyautogui.click()
+        time.sleep(0.1)
         
-        # Scroll up
-        pyautogui.scroll(300)  # Positive value to scroll up
-        print("Scrolled up")
+        # press left arrow button
+        pyautogui.press("left")
+        print("Pressed left arrow")
         
         # Small delay after scrolling
         time.sleep(0.5)
@@ -72,7 +78,7 @@ def refresher():
         time.sleep(0.5)
         
         # write the link
-        keyboard.write(yt_link)
+        keyboard.write(fb_link)
         print("link pasted")
 
         # Wait a moment before pressing Enter
@@ -88,7 +94,7 @@ def refresher():
         keyboard.press_and_release('enter')
         print("Pressed Enter")
         
-    time.sleep(30)
+    #time.sleep(30)
 
     #click page
     for i in range(3):        
@@ -107,9 +113,13 @@ def refresher():
     #click a short
     for i in range(3):        
         # Move the cursor to the specified position (x[i], y[i])
-        pyautogui.moveTo(x[i] - 200, y[i] + 150)
-        print(f"Cursor moved to position: ({x[i] - 200}, {y[i] + 150})")
+        pyautogui.moveTo(x[i] - 50, y[i] + 150)
+        print(f"Cursor moved to position: ({x[i] - 50}, {y[i] + 150})")
         time.sleep(0.5)
+
+        # Scroll down
+        pyautogui.scroll(-300)  # Negative value to scroll down
+        print("Scrolled down")
 
         # Click the mouse at the position
         pyautogui.click()
@@ -124,7 +134,7 @@ def refresher():
         time.sleep(0.5)
 
         # Scroll down
-        pyautogui.scroll(-600)  # Negative value to scroll down
+        pyautogui.scroll(-300)  # Negative value to scroll down - UPDATE THIS WHEN YOU HAVE MORE VIDS
         print("Scrolled down")
 
         # Click the mouse at the position
