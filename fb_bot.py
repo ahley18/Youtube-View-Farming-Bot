@@ -94,7 +94,7 @@ def refresher():
         keyboard.press_and_release('enter')
         print("Pressed Enter")
         
-    #time.sleep(30)
+    time.sleep(30)
 
     #click page
     for i in range(3):        
