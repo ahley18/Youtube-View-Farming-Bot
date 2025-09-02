@@ -69,8 +69,10 @@ def refresher():
         keyboard.press_and_release('ctrl+e')
         print("Pressed Ctrl + E")
 
-        time.sleep(0.5)
-
+        time.sleep(0.25)
+        keyboard.press_and_release('backspace')
+        print("Backspace pressed")
+        time.sleep(0.25)
         keyboard.press_and_release('backspace')
         print("Backspace pressed")
 
